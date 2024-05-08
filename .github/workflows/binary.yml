@@ -2,7 +2,7 @@ name: binary
 
 on:
   push:
-    workflow_dispatch:
+    # workflow_dispatch:
     tags:
       - "*"
 
@@ -42,5 +42,5 @@ jobs:
           version: latest
           args: release --clean
         env:
-          GITHUB_TOKEN: ${{ secrets.SST_GITHUB_TOKEN }}
-          AUR_KEY: ${{ secrets.AUR_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # AUR_KEY: ${{ secrets.AUR_KEY }}
